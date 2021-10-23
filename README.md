@@ -7,3 +7,23 @@ When you click a link "background page" the console page would pop up and execut
 And when the refresh button is pressed, it is refreshed literally.
 
 foreground.js는 background.js와 달리 자동으로 실행되지않는다.
+
+---
+
+### Note 2
+
+```js
+chrome.tabs.executeScript(null, { file: "./foreground.js" }, () =>
+  console.log("test")
+);
+```
+
+MDN에 따르면 JavaScrpt APIs 에서 tabs API가 있고 그안에 excuteScript 함수가 있다.
+용도는 js코드를 페이지로 inject 하는 것이다
+inject 한다는 말은 말그대로 그 자바스크립트를 열린 해당 사이트에서 사용가능하도록 주입한다는 이야기이다.
+추가적으로 자바스크립트 js 주입 공격 테스트 및 방지에 대해서 [이 링크](https://ko.myservername.com/javascript-injection-tutorial)에서 자세히 볼수있다.
+
+어쨋든 저 코드를 넣고 다시 로드해본다.
+그럼 Error 라는 빨갛게 된게 버튼이 뜬다.
+이버튼을 클릭하면 콘솔에 나왔던 에러가 그대로 나온다.
+로드하면 `chrome://extensions`에 뭐 주입할수없다 이런 이야기인듯 하다.
