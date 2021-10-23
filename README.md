@@ -91,3 +91,13 @@ document.querySelector(".rSk4se img").classList.add("spinspinspin");
 이미지 돌리는 css 만들고 `querySelecter.classList.add`해서 이미지 돌리는 클래스를 넣는다.
 
 ![Oct-23-2021 23-17-30](https://user-images.githubusercontent.com/59721293/138560245-ee1d4240-ff1a-4ca6-82da-704d536f00e4.gif)
+
+---
+
+### Note 6
+
+![2021-10-23_23-28-29](https://user-images.githubusercontent.com/59721293/138560571-b570b32f-c19a-4c10-bf53-54419fbb44a9.jpg)
+
+option이랑 popup은 위 이미지에 있는거 클릭하면나온다
+
+extension 아이콘을 누르면 popup이고 option은 deatils 항목에 들어가서 저걸 누르면 된다
