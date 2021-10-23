@@ -1,1 +1,1 @@
-console.log('from foreground')
+document.querySelector(".rSk4se img").classList.add("spinspinspin");
