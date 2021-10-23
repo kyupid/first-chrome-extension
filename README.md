@@ -101,3 +101,19 @@ document.querySelector(".rSk4se img").classList.add("spinspinspin");
 option이랑 popup은 위 이미지에 있는거 클릭하면나온다
 
 extension 아이콘을 누르면 popup이고 option은 deatils 항목에 들어가서 저걸 누르면 된다
+
+---
+
+### Note 7
+
+백엔드와 프론트엔드.
+
+설명:
+
+1. foregrounds.js 에서 first button을 클릭했을때 local storage에 `password: "123"`을 저장한다.
+2. second button을 클릭했을 때 runtime에서 Message를 보낸다
+3. background.js 에서 request.message가 second button에서 보낸 message가 같으면 local storage에서 "password"를 get 한다. 
+
+![2021-10-23_23-53-35](https://user-images.githubusercontent.com/59721293/138561363-7fd56881-68d4-46b4-9ecb-e700363c20e3.jpg)
+![2021-10-23_23-52-47](https://user-images.githubusercontent.com/59721293/138561371-64c2e59b-a65b-4c2b-b66f-d0b7eaa0fba7.jpg)
+
