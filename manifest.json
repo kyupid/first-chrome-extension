@@ -10,5 +10,5 @@
   "browser_action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "https://www.google.com/*"]
+  "permissions": ["tabs", "https://www.google.com/*", "storage"]
 }
