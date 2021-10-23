@@ -11,6 +11,7 @@ chrome.tabs.onActivated.addListener((tab) => {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === "yo check the storage") {
+    sendResponse({ message: "yo I got your message" });
     chrome.storage.local.get("password", (value) => {
       console.log(value);
     });
