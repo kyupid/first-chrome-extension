@@ -1,1 +1,1 @@
-console.log('from background')
+chrome.tabs.executeScript(null, {file: './foreground.js'}, ()=>console.log('test'))
