@@ -65,3 +65,29 @@ chrome.tabs.onActivated.addListener((tab) => {
 ![2021-10-23_22-56-35](https://user-images.githubusercontent.com/59721293/138559484-230b88a3-f0e6-4fa2-a7f2-716bc3f78d99.jpg)
 
 ---
+
+### Note 5
+```js
+// background.js
+
+chrome.tabs.onActivated.addListener((tab) => {
+  chrome.tabs.get(tab.tabId, (current_tab_info) => {
+    if (/^https:\/\/www\.google/.test(current_tab_info.url)) {
+      chrome.tabs.insertCSS(null, { file: "./mystyle.css" });
+      chrome.tabs.executeScript(null, { file: "./foreground.js" }, () =>
+        console.log("i injected")
+      );
+    }
+  });
+});
+
+```
+
+```js
+// foreground.js
+
+document.querySelector(".rSk4se img").classList.add("spinspinspin");
+```
+이미지 돌리는 css 만들고 `querySelecter.classList.add`해서 이미지 돌리는 클래스를 넣는다.
+
+![Oct-23-2021 23-17-30](https://user-images.githubusercontent.com/59721293/138560245-ee1d4240-ff1a-4ca6-82da-704d536f00e4.gif)
