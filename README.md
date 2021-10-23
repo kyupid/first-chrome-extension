@@ -27,3 +27,19 @@ inject 한다는 말은 말그대로 그 자바스크립트를 열린 해당 사
 그럼 Error 라는 빨갛게 된게 버튼이 뜬다.
 이버튼을 클릭하면 콘솔에 나왔던 에러가 그대로 나온다.
 로드하면 `chrome://extensions`에 뭐 주입할수없다 이런 이야기인듯 하다.
+
+---
+
+### Note 3
+
+```js
+chrome.tabs.onActivated.addListener((tab) => {
+  console.log(tab);
+});
+```
+
+background.js에 위 코드를 넣고 실행하고 background 콘솔을 보면
+탭을 클릭할때마다 background가 뭔가 계속 listening 하는것을 볼수있다.
+이걸로 어떤 도메인에 있는지 알 수가 있음.
+
+---
