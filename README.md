@@ -58,4 +58,10 @@ chrome.tabs.onActivated.addListener((tab) => {
 });
 ```
 
-코드 해석: 구글 홈페이지이면 foreground.js 를 실행한다. `i injected`는 background.js에서 나타남.
+코드 해석: 구글 홈페이지이면 foreground.js 를 실행한다. `i injected`는 background.js에서 나타남. 
+
+아래 이미지 참고
+
+![2021-10-23_22-56-35](https://user-images.githubusercontent.com/59721293/138559484-230b88a3-f0e6-4fa2-a7f2-716bc3f78d99.jpg)
+
+---
