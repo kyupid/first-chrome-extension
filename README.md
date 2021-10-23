@@ -43,3 +43,19 @@ background.js에 위 코드를 넣고 실행하고 background 콘솔을 보면
 이걸로 어떤 도메인에 있는지 알 수가 있음.
 
 ---
+
+### Note 4
+
+```js
+chrome.tabs.onActivated.addListener((tab) => {
+  chrome.tabs.get(tab.tabId, (current_tab_info) => {
+    if (/^https:\/\/www\.google/.test(current_tab_info.url)) {
+      chrome.tabs.executeScript(null, { file: "./foreground.js" }, () =>
+        console.log("i injected")
+      );
+    }
+  });
+});
+```
+
+코드 해석: 구글 홈페이지이면 foreground.js 를 실행한다. `i injected`는 background.js에서 나타남.
